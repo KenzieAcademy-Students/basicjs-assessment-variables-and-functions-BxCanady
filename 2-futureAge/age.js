@@ -1,6 +1,6 @@
 // Exercise Two - Calculating your future age.
 //
-// You want to know how old you will be in any given year.  Create a piece of code that will computer
+// You want to know how old you will be in any given year.  Create a piece of code that will compute
 // your age given your birth year and a year in the future.
 //
 // Step One:
@@ -21,4 +21,15 @@
 // Step Four:
 //    Print your message to the browser using document.write()
 //
-// 👇 WRITE YOUR CODE HERE 👇
+// 👇 WRITE YOUR CODE HERE
+//  Store user input in variables
+let birthYear = prompt(" What year was you born? ");
+let futureYear = prompt("Enter a year in the future");
+//  Function to  compute age in future year
+let currentYear = new Date().getFullYear();
+let currentAge = currentYear - birthYear;
+let ageInFutureYear = currentAge + (futureYear - currentYear);
+//  Call function and attached to string
+let message = `I will be ${ageInFutureYear} in ${futureYear}.`;
+
+document.write(message);
