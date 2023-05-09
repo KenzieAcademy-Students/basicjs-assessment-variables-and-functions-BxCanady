@@ -35,3 +35,23 @@
 //    Then test out your program with different numbers and snack!
 //
 // 👇 WRITE YOUR CODE HERE 👇
+let favoriteSnack = prompt("What is your favorite snack?");
+let snacksPerDay = prompt("How many " + favoriteSnack + " do you eat in a day?");
+let currentAge = prompt("What is your current age?");
+//number of days until they turn 100 by subtracting their 
+
+//current age from 100 and multiplying the result by 365 (the number of days in a year)
+let daysUntil100 = (100 - currentAge) * 365;
+
+//calculate the total number of snacks they would need to eat in their- 
+//lifetime by multiplying daysUntil100 by the number of snacks- 
+//they eat in a day.
+let lifetimeSnacks = daysUntil100 * snacksPerDay;
+//we can use the document.write() function in JavaScript to print a sentence-
+// to the browser that describes how many snacks the user will eat in their lifetime. 
+//We can concatenate together strings with our variables to form the message dynamically.
+document.write("Congratulations, you have won a lifetime supply of " 
++ favoriteSnack + "!<br>You will receive " 
++ snacksPerDay 
++ " " + favoriteSnack + " per day, for a grand total of " 
++ lifetimeSnacks + " " + favoriteSnack + ".");
